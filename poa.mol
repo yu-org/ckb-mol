@@ -1,0 +1,29 @@
+// Basic Types
+vector Bytes <byte>;
+
+array Uint32 [byte; 4];
+array Uint64 [byte; 8];
+array Uint128 [byte; 16];
+array Uint256 [byte; 32];
+array Hash [byte; 32];
+
+table Evidence {
+    height: Uint64;
+    block_hash: Hash;
+    txn_root: Hash;
+    state_root: HashOpt;
+    signatures: Signatures;
+
+    increate_validators: ValidatorsChange;
+    decreate_validators: ValidatorsChange;
+}
+
+vector Evidences <Evidence>;
+
+option ValidatorsChange (Validators);
+option HashOpt (Hash);
+
+vector Validators <Bytes>;
+vector Signatures <Bytes>;
+
+
