@@ -8,14 +8,14 @@ array Uint256 [byte; 32];
 array Hash [byte; 32];
 
 table Evidence {
-    height: Uint64;
-    block_hash: Hash;
-    txn_root: Hash;
-    state_root: HashOpt;
-    signatures: Signatures;
+    height: Uint64,
+    block_hash: Hash,
+    txn_root: Hash,
+    state_root: HashOpt,
+    signatures: Signatures,
 
-    increate_validators: ValidatorsChange;
-    decreate_validators: ValidatorsChange;
+    increate_validators: ValidatorsChange,
+    decreate_validators: ValidatorsChange,
 }
 
 vector Evidences <Evidence>;
