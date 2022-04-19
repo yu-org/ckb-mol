@@ -12,10 +12,6 @@ table Evidence {
     block_hash: Hash,
     txn_root: Hash,
     state_root: Hash,
-    signatures: Signatures,
-
-    increate_validators: ValidatorsChange,
-    decreate_validators: ValidatorsChange,
 }
 
 vector Evidences <Evidence>;
