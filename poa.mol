@@ -11,7 +11,7 @@ table Evidence {
     height: Uint64,
     block_hash: Hash,
     txn_root: Hash,
-    state_root: HashOpt,
+    state_root: Hash,
     signatures: Signatures,
 
     increate_validators: ValidatorsChange,
@@ -21,7 +21,6 @@ table Evidence {
 vector Evidences <Evidence>;
 
 option ValidatorsChange (Validators);
-option HashOpt (Hash);
 
 vector Validators <Bytes>;
 vector Signatures <Bytes>;
